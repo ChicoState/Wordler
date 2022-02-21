@@ -31,7 +31,7 @@ int main(){
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
-        capitalize(guess);
+        
         guesses++;
         hint = capitalize(get_hint(guess,secret));
 
