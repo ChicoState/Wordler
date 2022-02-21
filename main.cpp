@@ -20,11 +20,17 @@ int main(){
     // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
     std::cout << "Guess your five-letter word:\n_____\n";
+    std::cout << "Type quit to exit the game\n";
     
     do{
         do{
             std::cin >> guess;
-        }while( guess.length() != 5 );
+            std::cout << guess;
+            if(guess == "quit") {
+              std::cout << "Hope you had fun playing!! You will now exit the game." << std::endl;
+              return 0;
+            }
+        }while( guess.length() != 5);
 
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
