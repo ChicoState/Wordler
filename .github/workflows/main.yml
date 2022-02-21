@@ -29,4 +29,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: compile c++ 2017
-        run: g++ main.cpp -std=c++17 -o Wordler
+        run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
