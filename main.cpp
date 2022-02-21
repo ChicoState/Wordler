@@ -26,11 +26,10 @@ int main(){
         do{
             std::cin >> guess;
         }while( guess.length() != 5 );
-
+	if(guess == "quit"
+		return 0;
         // capitalize guess for easy comparisons
         capitalize(guess);
-        if (guess == "quit")
-		return 0;
 	guesses++;    
     	hint = capitalize(get_hint(guess,secret));
         
