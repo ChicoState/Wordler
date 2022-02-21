@@ -16,4 +16,4 @@ jobs:
       - name: Install dependencies
         run: sudo apt install -y build-essential
       - name: Compile C++ 2017
-        run: g++ main.cpp -std=c++17 -o Wordler
+        run: make 
