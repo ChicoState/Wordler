@@ -63,7 +63,7 @@ std::string get_hint(std::string match, std::string word){
 }
 
 // capitalizes a word (to UPPER CASE)
-void capitalize(std::string & word){
+void capitalize(std::string &word){
     for(int i=0; i<word.length(); i++){
         word[i] = toupper(word[i]);
     }
