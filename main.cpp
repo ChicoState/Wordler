@@ -24,6 +24,7 @@ int main(){
     do{
         do{
             std::cin >> guess;
+            //added a copy of the for loop to check input against QUIT to leave the game. 
             for(int i=0; i<guess.length(); i++){
                 guess[i] = toupper(guess[i]);
             }
