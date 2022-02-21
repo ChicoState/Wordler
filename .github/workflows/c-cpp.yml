@@ -17,7 +17,3 @@ jobs:
       run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
