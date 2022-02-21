@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: Makefile
+        run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
