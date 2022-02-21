@@ -22,11 +22,11 @@ int main(){
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
     std::cout << "Guess your five-letter word:\n_____\n";
     
-do{
-
-        // require user to enter another guess if their word isn't 5 letters long
 	do{
-            std::cin >> guess;
+
+        	// require user to enter another guess if their word isn't 5 letters long
+	do{
+            		std::cin >> guess;
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
