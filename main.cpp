@@ -24,6 +24,10 @@ int main(){
     do{
         do{
             std::cin >> guess;
+	    if(guess == "quit"){
+		std::cout << "Thank you for playing.\n";
+		exit(0);	
+	    }
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
