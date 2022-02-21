@@ -1,30 +1,61 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "dictionary.h"
-#include <vector>
-#include <string>
-#include <fstream>
 
-// initiate word dictionary from file .wordler.data and store them as a 
-// list of upper case letters
-dictionary::dictionary(){
-    std::ifstream read(".wordler.data");
+// function prototypes:
+std::string get_hint(std::string,std::string);
 
-    if( !read.is_open() ){
-        words.push_back("words");
+// Wordler game!
+int main(){
+    srand(time(NULL)); //execute only once per run
+
+    dictionary word_list;
+    std::string guess;
+    std::string hint;
+    std::string secret;
+    int guesses = 0;
+
+    secret = word_list.select_word();
+    // REVEAL ANSWER: std::cout << secret << std::endl;
+    std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
+    std::cout << "Guess your five-letter word:\n_____\n";
+    
+    do{
+        do{
+            std::cin >> guess;
+                if (guess == "quit"){
+        return 0;
     }
-    else{
-        std::string word;
-        while( getline(read,word) ){
-            //convert every word to UPPER CASE
-            for(int i=0; i<word.length(); i++){
-                word[i] = toupper(word[i]);
-            }
-            words.push_back(word);
+        }while( guess.length() != 5 );
+
+        // capitalize guess for easy comparisons
+        for(int i=0; i<guess.length(); i++){
+            guess[i] = toupper(guess[i]);
         }
-    }
-    read.close();
+        guesses++;
+        hint = get_hint(guess,secret);
+
+        if( hint == secret ){
+            std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
+        }
+        else{
+            std::cout << hint << " Guess again: ";
+        }
+    }while( hint != secret );
+    
+
+    return 0;
 }
 
-// select a random word from our dictionary and return it
-std::string dictionary::select_word(){
-    return words.at(rand() % words.size());
+// compares a guess and a secret word and reveals matching letters, but all
+// non-matching letters become underscores ('_') and the hint is returned
+std::string get_hint(std::string match, std::string word){
+
+    for(int i=0; i<word.length(); i++){
+        if( word[i] != match[i] ){
+            word[i] = '_';
+        }
+    }
+    return word;
 }
