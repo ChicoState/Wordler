@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
-      run: ./wordler
+    - name: configure
+      run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
     - name: make
       run: make
     - name: make check
