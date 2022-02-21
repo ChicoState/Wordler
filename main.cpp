@@ -33,11 +33,10 @@ int main(){
             std::cin >> guess;
         }while( guess.length() != 5 );
 
+
+        if (guess == "quit")
+            return 0;
         // capitalize guess for easy comparisons
-        /*
-        for(int i=0; i<guess.length(); i++){
-            guess[i] = toupper(guess[i]);
-        }*/
 
         guess = capitalize(guess);
         guesses++;
