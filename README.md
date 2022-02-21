@@ -21,3 +21,6 @@ The game will randomly-select a 5-letter word and you have unlimited guesses to 
 To exit the game:
 
 Type "quit"
+
+
+[![C++ CI](https://github.com/tmasuda14/Wordler/actions/workflows/actions.yml/badge.svg)](https://github.com/tmasuda14/Wordler/actions/workflows/actions.yml)
