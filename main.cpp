@@ -23,6 +23,13 @@ int main(){
     
     do{
         do{
+        for(int i=0; i<guess.length(); i++){
+            guess[i] = toupper(guess[i]);
+        }
+        if(guess[0] == 'Q' && guess[1] == 'U' && guess[2] == 'I' && guess[3] == 'T')
+        {
+        return 0;
+        }
             std::cin >> guess;
         }while( guess.length() != 5 );
 
@@ -30,16 +37,20 @@ int main(){
         for(int i=0; i<guess.length(); i++){
             guess[i] = toupper(guess[i]);
         }
+        
         guesses++;
+        
         hint = get_hint(guess,secret);
-
+	
         if( hint == secret ){
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
         }
         else{
             std::cout << hint << " Guess again: ";
         }
-    }while( hint != secret );
+    }
+        
+    while( hint != secret );
     
 
     return 0;
@@ -48,6 +59,7 @@ int main(){
 // compares a guess and a secret word and reveals matching letters, but all
 // non-matching letters become underscores ('_') and the hint is returned
 std::string get_hint(std::string match, std::string word){
+
     for(int i=0; i<word.length(); i++){
         if( word[i] != match[i] ){
             word[i] = '_';
