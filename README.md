@@ -1,6 +1,6 @@
 # Wordler
 
-[![C++ CI](https://github.com/dhelms1/Wordler/actions/workflows/actions.yml/badge.svg?event=push)](https://github.com/dhelms1/Wordler/actions/workflows/actions.yml)
+[![C++ CI](https://github.com/dhelms1/Wordler/actions/workflows/actions.yml/badge.svg?branch=main&event=push)](https://github.com/dhelms1/Wordler/actions/workflows/actions.yml)
 
 This is a command line word guessing game.
 
