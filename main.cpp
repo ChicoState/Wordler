@@ -5,6 +5,7 @@
 
 // function prototypes:
 std::string get_hint(std::string,std::string);
+void capitalize(std::string &);
 
 // Wordler game!
 int main(){
@@ -50,10 +51,17 @@ int main(){
 // compares a guess and a secret word and reveals matching letters, but all
 // non-matching letters become underscores ('_') and the hint is returned
 std::string get_hint(std::string match, std::string word){
-	for(int i=0; i<word.length(); i++){
-		if( word[i] != match[i] ){
-			word[i] = '_';
-		}
-	}
-	return word;
+    for(int i=0; i<word.length(); i++){
+        if( word[i] != match[i] ){
+            word[i] = '_';
+        }
+    }
+    return word;
+}
+
+// capitalizes a word (to UPPER CASE)
+void capitalize(std::string & word){
+    for(int i=0; i<word.length(); i++){
+        word[i] = toupper(word[i]);
+    }
 }
