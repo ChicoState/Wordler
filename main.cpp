@@ -30,10 +30,7 @@ int main(){
                         return 0;
         }while( guess.length() != 5 );
 
-        // capitalize guess for easy comparisons
-        capitalize(guess);
         guesses++;
-        hint = capitalize(get_hint(guess,secret));
 
         if( hint == secret ){
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
@@ -57,11 +54,3 @@ std::string get_hint(std::string match, std::string word){
     }
     return word;
 }
-/*
-// capitalizes a word (to UPPER CASE)
-void capitalize(std::string & word){
-    for(int i=0; i<word.length(); i++){
-        word[i] = toupper(word[i]);
-    }
-}
-*/
