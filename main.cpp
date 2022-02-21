@@ -5,7 +5,7 @@
 
 // function prototypes:
 std::string get_hint(std::string,std::string);
-
+void capitalize(std::string &);
 
 // Wordler game!
 int main(){
@@ -29,7 +29,7 @@ int main(){
             if(guess == "quit")
               return 0;
         }while( guess.length() != 5 );
-
+        capitalize(guess);
         // capitalize guess for easy comparisons
         
         guesses++;
