@@ -15,6 +15,7 @@ int main(){
     std::string hint;
     std::string secret;
     int guesses = 0;
+    bool quit = false;
 
     secret = word_list.select_word();
     // REVEAL ANSWER: std::cout << secret << std::endl;
@@ -24,7 +25,16 @@ int main(){
     do{
         do{
             std::cin >> guess;
+            if (guess == "quit" || guess == "QUIT") {
+                quit = true;
+                break;
+            }
         }while( guess.length() != 5 );
+
+        if (quit) {
+            std::cout << "You have quit the game. Have a good day!\n";
+            break;
+        }
 
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
