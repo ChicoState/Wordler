@@ -1,4 +1,5 @@
 # Wordler
+[![CI](https://github.com/jtmacoco/Wordler/actions/workflows/main.yml/badge.svg)](https://github.com/jtmacoco/Wordler/actions/workflows/main.yml)
 
 This is a command line word guessing game.
 
