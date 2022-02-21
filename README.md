@@ -1,3 +1,4 @@
+[![CI](https://github.com/snowmang1/Wordler/actions/workflows/CI.yml/badge.svg)](https://github.com/snowmang1/Wordler/actions/workflows/CI.yml)
 # Wordler
 
 This is a command line word guessing game.
