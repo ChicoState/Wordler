@@ -24,6 +24,11 @@ int main(){
     do{
         do{
             std::cin >> guess;
+            if (guess == "quit"){ /* If user enters 'quit' exit them from game */
+            std::cout << "Exiting.."<< std::endl;
+                exit(0);
+            }
+            
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
