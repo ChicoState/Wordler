@@ -27,5 +27,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Compile C++ 
-        run: g++ main.cpp -std=c++17
+        run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
         
