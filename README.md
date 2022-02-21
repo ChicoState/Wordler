@@ -1,4 +1,5 @@
 # Wordler
+[![C++ CI](https://github.com/DJ-IRL/Wordler/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/DJ-IRL/Wordler/actions/workflows/c-cpp.yml)
 
 This is a command line word guessing game.
 
