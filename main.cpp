@@ -24,21 +24,25 @@ int main(){
     do{
         do{
             std::cin >> guess;
-        }while( guess.length() != 5 );
+			if (guess == "quit") {
+				return 0;
+			}
+        }while( guess.length() != 5);
 
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
             guess[i] = toupper(guess[i]);
         }
-        guesses++;
-        hint = get_hint(guess,secret);
+		
+		guesses++;
+		hint = get_hint(guess,secret);
 
-        if( hint == secret ){
-            std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
-        }
-        else{
-            std::cout << hint << " Guess again: ";
-        }
+		if( hint == secret ){
+			std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
+		}
+		else{
+			std::cout << hint << " Guess again: ";
+		}
     }while( hint != secret );
     
 
