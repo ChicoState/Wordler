@@ -25,15 +25,14 @@ int main(){
         // require user to enter another guess if their word isn't 5 letters long
         do{
             std::cin >> guess;
->>>>>>> main
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
         capitalize(guess);
         guesses++;    
-	hint = capitalize(get_hint(guess,secret));
+    hint = capitalize(get_hint(guess,secret));
         
-	if( hint == secret ){
+    if( hint == secret ){
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
         }
         else{
@@ -61,5 +60,4 @@ void capitalize(std::string & word){
     for(int i=0; i<word.length(); i++){
         word[i] = toupper(word[i]);
     }
-
 }
