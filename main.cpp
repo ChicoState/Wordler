@@ -36,7 +36,8 @@ int main(){
         // capitalize guess for easy comparisons
         capitalize(guess);
         guesses++;
-        hint = capitalize(get_hint(guess,secret));
+        capitalize(guess);
+        hint = get_hint(guess,secret);
 
         if( hint == secret ){
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
