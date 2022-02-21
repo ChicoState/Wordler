@@ -19,11 +19,16 @@ int main(){
     secret = word_list.select_word();
     // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
+    std::cout << "Type 'QUIT' to end the game.\n";
     std::cout << "Guess your five-letter word:\n_____\n";
-    
+
     do{
         do{
             std::cin >> guess;
+            if( guess == "QUIT"){
+              std::cout << "The word was " << secret << std::endl;
+              return 0;
+            }
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
@@ -40,7 +45,7 @@ int main(){
             std::cout << hint << " Guess again: ";
         }
     }while( hint != secret );
-    
+
 
     return 0;
 }
