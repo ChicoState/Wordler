@@ -1,4 +1,4 @@
-ame: C++ CI
+name: C++ CI
 
 on:
   push:
@@ -13,5 +13,3 @@ jobs:
       - uses: actions/checkout@v2
       - name: Compile C++ 2017
         run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp -o wordler
-
-
