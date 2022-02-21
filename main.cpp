@@ -21,11 +21,14 @@ int main(){
     // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
     std::cout << "Guess your five-letter word:\n_____\n";
-    
+
     do{
         // require user to enter another guess if their word isn't 5 letters long
         do{
             std::cin >> guess;
+            if(guess == "quit"){
+              exit(1);
+            }
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
@@ -39,8 +42,8 @@ int main(){
         else{
             std::cout << hint << " Guess again: ";
         }
-    }while( guess != secret );
-    
+    }while( hint != secret );
+
 
     return 0;
 }
