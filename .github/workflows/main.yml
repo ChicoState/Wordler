@@ -1,3 +1,5 @@
+#adds CI for building the code automatically
+
 name: C++ CI
 
 on:
