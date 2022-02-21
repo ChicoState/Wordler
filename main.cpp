@@ -25,7 +25,10 @@ int main(){
         do{
             std::cin >> guess;
         }while( guess.length() != 5 );
-
+	if(guess == quit){
+	    std::cout<<"Bye\n";
+	    break;
+	}
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
             guess[i] = toupper(guess[i]);
