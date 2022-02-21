@@ -24,6 +24,9 @@ int main(){
     do{
         do{
             std::cin >> guess;
+                if (guess == "quit"){
+        return 0;
+    }
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
@@ -48,6 +51,7 @@ int main(){
 // compares a guess and a secret word and reveals matching letters, but all
 // non-matching letters become underscores ('_') and the hint is returned
 std::string get_hint(std::string match, std::string word){
+
     for(int i=0; i<word.length(); i++){
         if( word[i] != match[i] ){
             word[i] = '_';
