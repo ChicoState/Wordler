@@ -25,6 +25,7 @@ int main(){
         do{
             std::cin >> guess;
 	    if ( guess == "quit" ){
+		    std::cout << "Thanks for playing!\n";
 		    return 0;
 	    }
         }while( guess.length() != 5 );
