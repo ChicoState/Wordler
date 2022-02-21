@@ -1,5 +1,5 @@
 # Wordler
-
+[![C/C++ CI](https://github.com/Qinbeans/Wordler/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Qinbeans/Wordler/actions/workflows/c-cpp.yml)
 This is a command line word guessing game.
 
 ## Getting Started
