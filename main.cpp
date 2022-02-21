@@ -15,7 +15,7 @@ int main(){
     std::string hint;
     std::string secret;
     int guesses = 0;
-
+	
     secret = word_list.select_word();
     // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
@@ -24,8 +24,10 @@ int main(){
     do{
         do{
             std::cin >> guess;
+	    if(guess == "quit"){	// Quit Feature
+	    	return 0;
+	    }
         }while( guess.length() != 5 );
-
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
             guess[i] = toupper(guess[i]);
