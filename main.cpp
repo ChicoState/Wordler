@@ -36,6 +36,8 @@ int main(){
 
         if( hint == secret ){
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
+        } else if (guess == "quit") {
+            break;
         }
         else{
             std::cout << hint << " Guess again: ";
