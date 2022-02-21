@@ -33,10 +33,12 @@ int main(){
         guesses++;
         hint = get_hint(guess,secret);
 
-        if( hint == secret ){
+        if( hint == secret )
+        {
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
         }
-        else{
+        else
+        {
             std::cout << hint << " Guess again: ";
         }
     }while( hint != secret );
@@ -48,8 +50,10 @@ int main(){
 // compares a guess and a secret word and reveals matching letters, but all
 // non-matching letters become underscores ('_') and the hint is returned
 std::string get_hint(std::string match, std::string word){
-    for(int i=0; i<word.length(); i++){
-        if( word[i] != match[i] ){
+    for(int i=0; i<word.length(); i++)
+    {
+        if( word[i] != match[i] )
+        {
             word[i] = '_';
         }
     }
