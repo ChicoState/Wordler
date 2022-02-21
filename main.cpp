@@ -28,7 +28,7 @@ int main(){
 
         //quit if user guess is quit
         if (guess == "quit") {
-            atd::cout << "Quitting game. Have a nice day!" << endl;
+            std::cout << "Quitting game. Have a nice day!" << endl;
             return 0;
         }
 
