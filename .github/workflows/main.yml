@@ -28,5 +28,5 @@ jobs:
       - name: Install dependencies 
         run: sudo apt install -y build-essential 
           
-      - name: compile c++ 2017
-        run: g++ main.cpp -std=c++17 
+      - name: compile c++ 2011
+        run: g++ -std=c++11 -Wfatal-errors main.cpp dictionary.cpp 
