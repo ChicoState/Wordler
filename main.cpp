@@ -8,7 +8,8 @@ std::string get_hint(std::string,std::string);
 void capitalize(std::string &);
 
 // Wordler game!
-int main(){
+int main()
+{
     srand(time(NULL)); //execute only once per run
 
     dictionary word_list;
