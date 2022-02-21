@@ -26,10 +26,12 @@ int main(){
         // require user to enter another guess if their word isn't 5 letters long
         do{
             std::cin >> guess;
+            capitalize(guess);
+            if (guess == "QUIT") exit(0);
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
-        capitalize(guess);
+
         guesses++;
         hint = capitalize(get_hint(guess,secret));
 
@@ -56,9 +58,10 @@ std::string get_hint(std::string match, std::string word){
     return word;
 }
 
-// capitalizes a word (to UPPER CASE)
+
+//capitalizes a word (to UPPER CASE)
 void capitalize(std::string & word){
-    for(int i=0; i<word.length(); i++){
-        word[i] = toupper(word[i]);
-    }
+        for(int i=0; i<word.length(); i++){
+                    word[i] = toupper(word[i]);
+        }
 }
