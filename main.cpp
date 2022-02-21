@@ -32,7 +32,7 @@ int main(){
         // capitalize guess for easy comparisons
         capitalize(guess);
         guesses++;
-hint = capitalize(get_hint(guess,secret));
+	hint = capitalize(get_hint(guess,secret));
         
 	if( hint == secret ){
             std::cout << "Congrats, you got it in " << guesses << " guesses!\n";
@@ -62,4 +62,5 @@ void capitalize(std::string & word){
     for(int i=0; i<word.length(); i++){
         word[i] = toupper(word[i]);
     }
+
 }
