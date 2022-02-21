@@ -6,6 +6,13 @@
 // function prototypes:
 std::string get_hint(std::string,std::string);
 
+std::string capitalize(std::string guess){
+    for(int i=0; i<guess.length(); i++){
+        guess[i] = toupper(guess[i]);
+    }
+    return guess;
+}
+
 // Wordler game!
 int main(){
     srand(time(NULL)); //execute only once per run
@@ -27,9 +34,12 @@ int main(){
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
+        /*
         for(int i=0; i<guess.length(); i++){
             guess[i] = toupper(guess[i]);
-        }
+        }*/
+
+        guess = capitalize(guess);
         guesses++;
         hint = get_hint(guess,secret);
 
