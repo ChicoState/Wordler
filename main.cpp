@@ -20,12 +20,17 @@ int main(){
     // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
     std::cout << "Guess your five-letter word:\n_____\n";
-    
+
     do{
         do{
             std::cin >> guess;
+            for(int i=0; i<guess.length(); i++){
+                guess[i] = toupper(guess[i]);
+            }
+            if (guess == "QUIT"){
+                exit(0);
+            }
         }while( guess.length() != 5 );
-
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
             guess[i] = toupper(guess[i]);
@@ -40,7 +45,7 @@ int main(){
             std::cout << hint << " Guess again: ";
         }
     }while( hint != secret );
-    
+
 
     return 0;
 }
