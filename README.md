@@ -1,7 +1,7 @@
 # Wordler
 
 This is a command line word guessing game.
-
+[![C++ CI](https://github.com/AngelFrias1/Wordler/actions/workflows/main.yml/badge.svg)](https://github.com/AngelFrias1/Wordler/actions/workflows/main.yml)
 ## Getting Started
 
 To build the project, use the following command:
