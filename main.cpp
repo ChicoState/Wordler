@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "dictionary.h"
-
+//changed here
 // function prototypes:
 std::string get_hint(std::string,std::string);
 
