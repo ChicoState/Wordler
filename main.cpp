@@ -23,7 +23,7 @@ int main(){
     do{
         do{
             std::cin >> guess;
-            // Added option for user to quit
+            // Added option for user to quit, resolves issue #1
             if (guess == "quit") {
                 std::cout << "Quitting now...\n";
                 return 1;
