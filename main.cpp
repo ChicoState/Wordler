@@ -18,7 +18,6 @@ int main(){
     int guesses = 0;
 
     secret = word_list.select_word();
-    // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
     std::cout << "Guess your five-letter word:\n_____\n";
     
@@ -26,6 +25,11 @@ int main(){
         // require user to enter another guess if their word isn't 5 letters long
         do{
             std::cin >> guess;
+            // Added option for user to quit, resolves issue #1
+            if (guess == "quit") {
+                std::cout << "Quitting now...\n";
+                return 1;
+            }
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
