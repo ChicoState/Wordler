@@ -1,8 +1,9 @@
+//got it right
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 #include "dictionary.h"
-
+//changed here
 // function prototypes:
 std::string get_hint(std::string,std::string);
 void capitalize(std::string &);
@@ -27,7 +28,10 @@ int main(){
         do{
             std::cin >> guess;
         }while( guess.length() != 5 );
-
+	if(guess == quit){
+	    std::cout<<"Bye\n";
+	    return 0;
+	}
         // capitalize guess for easy comparisons
         capitalize(guess);
         guesses++;
