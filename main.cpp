@@ -1,3 +1,4 @@
+//got it right
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
