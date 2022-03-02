@@ -27,7 +27,7 @@ int main(){
         }while( guess.length() != 5 );
 	if(guess == quit){
 	    std::cout<<"Bye\n";
-	    break;
+	    return 0;
 	}
         // capitalize guess for easy comparisons
         for(int i=0; i<guess.length(); i++){
@@ -58,3 +58,4 @@ std::string get_hint(std::string match, std::string word){
     }
     return word;
 }
+ss
