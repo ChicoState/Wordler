@@ -5,7 +5,7 @@
 
 // function prototypes:
 std::string get_hint(std::string,std::string);
-void capitalize(std::string &);
+std::string capitalize(std::string);
 
 // Wordler game!
 int main()
@@ -30,7 +30,7 @@ int main()
         }while( guess.length() != 5 );
 
         // capitalize guess for easy comparisons
-        capitalize(guess);
+        guess = capitalize(guess);
         guesses++;
         hint = capitalize(get_hint(guess,secret));
 
@@ -64,8 +64,9 @@ std::string get_hint(std::string match, std::string word){
 
 
 // capitalizes a word (to UPPER CASE)
-void capitalize(std::string & word){
+std::string capitalize(std::string word){
     for(int i=0; i<word.length(); i++){
         word[i] = toupper(word[i]);
     }
+    return word;
 }
