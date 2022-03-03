@@ -30,7 +30,7 @@ int main()
 
             if(guess ==  "quit")
             {
-                std::cout << "Quitting Program..." << endl;
+                std::cout << "Quitting Program..." << std::endl;
                 exit(1);
             }
 
