@@ -43,7 +43,7 @@ int main(){
         do{
             std::cin >> guess;
         }while( guess.length() != 5 );
-
+      //user can quit
         if(guess == "quit"){
             return 0;
         }
