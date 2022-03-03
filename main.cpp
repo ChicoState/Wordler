@@ -48,6 +48,7 @@ int main()
     return 0;
 }
 
+
 // compares a guess and a secret word and reveals matching letters, but all
 // non-matching letters become underscores ('_') and the hint is returned
 std::string get_hint(std::string match, std::string word){
@@ -60,6 +61,7 @@ std::string get_hint(std::string match, std::string word){
     }
     return word;
 }
+
 
 // capitalizes a word (to UPPER CASE)
 void capitalize(std::string & word){
