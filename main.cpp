@@ -24,7 +24,7 @@ int main(){
     do{
         do{
             std::cin >> guess;
-	    if( guess == "QUIT") {
+	    if( guess == "QUIT") { //Exits the cin while loop;
 		    break;
 	    }
         }while( guess.length() != 5 );
@@ -35,7 +35,7 @@ int main(){
         }
         guesses++;
         hint = get_hint(guess,secret);
- 	if (guess == "QUIT" ){
+ 	if (guess == "QUIT" ){ // Exits greater while loop... returns thanks for playing message.
 	    std::cout << "Thank you for playing!\n";
 	    break;
 	}
