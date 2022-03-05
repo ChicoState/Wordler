@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile C++ 2017
-        run: g++ main.cpp -std=c++17 
+        run: make 
