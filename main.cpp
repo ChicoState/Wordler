@@ -25,11 +25,10 @@ int main(){
         // require user to enter another guess if their word isn't 5 letters long	
 	    do{
             	std::cin >> guess;
-        	
 	        if (guess == "quit"){
+		std::cout << "Now quitting";
 	        exit(1);
 		}
-
 	    }while( guess.length() != 5 );
         // capitalize guess for easy comparisons
         guess = capitalize(guess);
