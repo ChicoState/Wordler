@@ -21,12 +21,18 @@ int main(){
     // REVEAL ANSWER: std::cout << secret << std::endl;
     std::cout << "Welcome to Wordler -- a game that totally isn't simplified Wordle\n";
     std::cout << "Guess your five-letter word:\n_____\n";
+    std::cout << "Type quit to exit the game\n";
     
     do{
         // require user to enter another guess if their word isn't 5 letters long
         do{
             std::cin >> guess;
-        }while( guess.length() != 5 );
+            std::cout << guess;
+            if(guess == "quit") {
+              std::cout << "Hope you had fun playing!! You will now exit the game." << std::endl;
+              return 0;
+            }
+        }while( guess.length() != 5);
 
         // capitalize guess for easy comparisons
         capitalize(guess);
@@ -57,7 +63,7 @@ std::string get_hint(std::string match, std::string word){
 }
 
 // capitalizes a word (to UPPER CASE)
-void capitalize(std::string & word){
+void capitalize(std::string &word){
     for(int i=0; i<word.length(); i++){
         word[i] = toupper(word[i]);
     }
