@@ -1,0 +1,17 @@
+name: C++ CI
+
+on:
+  push:
+    branches: [ main, design ]
+  pull_request:
+    branches: [ main, design ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build docker container
+        run: |
+          docker build -t cpp-analysis .
+          docker run -d cpp-analysis
