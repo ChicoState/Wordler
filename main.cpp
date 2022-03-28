@@ -7,6 +7,13 @@
 std::string get_hint(std::string,std::string);
 void capitalize(std::string &);
 
+std::string capitalize(std::string guess){
+    for(int i=0; i<guess.length(); i++){
+        guess[i] = toupper(guess[i]);
+    }
+    return guess;
+}
+
 // Wordler game!
 int main(){
     srand(time(NULL)); //execute only once per run
@@ -28,8 +35,12 @@ int main(){
             std::cin >> guess;
         }while( guess.length() != 5 );
 
+
+        if (guess == "quit")
+            return 0;
         // capitalize guess for easy comparisons
-        capitalize(guess);
+
+        guess = capitalize(guess);
         guesses++;
         hint = get_hint(guess,secret);
         capitalize(hint);
@@ -55,11 +66,4 @@ std::string get_hint(std::string match, std::string word){
         }
     }
     return word;
-}
-
-// capitalizes a word (to UPPER CASE)
-void capitalize(std::string & word){
-    for(int i=0; i<word.length(); i++){
-        word[i] = toupper(word[i]);
-    }
 }
